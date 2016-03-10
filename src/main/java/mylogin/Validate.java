@@ -25,7 +25,8 @@ public class Validate {
 
             Class.forName(driver).newInstance();
             conn = DriverManager.getConnection(url, userName, password);
-// sql query for extracting username and  password from the database
+
+            // sql query for extracting username and  password from the database
             //password is encrypted by MD5
             String query = "select usrName, usrPass from tbl_user where usrName=\"" + name + "\" and usrPass=md5(\"" + pass + "\");";
 
